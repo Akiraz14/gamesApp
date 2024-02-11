@@ -1,1 +1,16 @@
-<p>language-menu works!</p>
+<div class="btn-group">
+  <button type="button" class="flag btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    <span class="me-1">{{currentLanguage().shorthand | lowercase}}</span>
+    <img [src]="currentLanguage().imgUrl" [alt]="currentLanguage().name">
+  </button>
+  <ul class="dropdown-menu">
+    <li *ngFor="let lang of languages">
+      <button class="btn" (click)="changeLanguage(lang.code)">
+        <div class="flag d-flex align-items-center">
+          <span class="me-1">{{lang.shorthand | lowercase}}</span>
+          <img [src]="lang.imgUrl" [alt]="lang.name">
+        </div>
+      </button>
+    </li>
+  </ul>
+</div>

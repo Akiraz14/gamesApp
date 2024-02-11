@@ -1,0 +1,15 @@
+
+.flag {
+  display: flex;
+  align-items: center;
+
+  img {
+    height: 1rem;
+    width: 1.5rem;
+    border-radius: 4px;
+  }
+}
+
+.dropdown-menu {
+  min-width: auto;
+}

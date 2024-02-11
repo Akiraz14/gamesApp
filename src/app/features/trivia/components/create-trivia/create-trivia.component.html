@@ -1,1 +1,55 @@
-<p>create-trivia works!</p>
+<div class="container" *transloco="let t; scope: 'trivia'">
+
+  <form [formGroup]="triviaForm" (ngSubmit)="onSubmit()" class="row">
+      <div class="col">
+        <label for="category" class="form-label">
+          {{t('trivia.category')}}
+        </label>
+        <select id="category" formControlName="category" class="form-select" aria-label="Select category">
+          <option value="" selected>
+            {{t('trivia.categories.all')}}
+          </option>
+          <option *ngFor="let category of categories" [value]="category">
+            {{t('trivia.categories.'+category)}}
+          </option>
+        </select>
+      </div>
+
+      <div class="col" formGroupName="difficulties">
+        <label class="form-label">{{t('trivia.difficulty')}}</label>
+        <div class="form-check form-switch">
+          <input class="form-check-input" formControlName="difficultyEasy" type="checkbox" role="switch" id="difficultyEasy" [checked]="difficultyEasy()" [value]="difficultyEasy()" (change)="changeDifficulty('easy')">
+          <label class="form-check-label" for="difficultyEasy">{{t('trivia.difficulties.easy')}}</label>
+        </div>
+        <div class="form-check form-switch">
+          <input class="form-check-input" formControlName="difficultyMedium" type="checkbox" role="switch" id="difficultyMedium" [checked]="difficultyMedium()" [value]="difficultyMedium()" (change)="changeDifficulty('medium')">
+          <label class="form-check-label" for="difficultyMedium">{{t('trivia.difficulties.medium')}}</label>
+        </div>
+        <div class="form-check form-switch">
+          <input class="form-check-input" formControlName="difficultyHard" type="checkbox" role="switch" id="difficultyHard" [checked]="difficultyHard()" [value]="difficultyHard()" (change)="changeDifficulty('hard')">
+          <label class="form-check-label" for="difficultyHard">{{t('trivia.difficulties.hard')}}</label>
+        </div>
+        <hr>
+        <div class="form-check form-switch">
+          <input class="form-check-input" formControlName="difficultyAll" type="checkbox" role="switch" id="difficultyAll" [checked]="difficultyAll()" [value]="difficultyAll()" (change)="selectAllDifficulties()">
+          <label class="form-check-label" for="difficultyAll">{{t('trivia.difficulties.all')}}</label>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="row">
+          <div class="col">
+            <label for="questionsNumber" class="form-label">{{t('trivia.questionsNumber')}}: {{currQuestionNum()}}</label>
+            <input type="range" class="form-range" formControlName="questionsNumber" id="questionsNumber" [min]="minQuestions" [max]="maxQuestions" #qNumber (change)="changeQuestionsNumber(qNumber.valueAsNumber)">
+          </div>
+        </div>
+      </div>
+      
+      <div class="col">
+        <button type="submit" [disabled]="triviaForm.invalid" class="btn btn-primary">{{t('trivia.create')}}</button>
+      </div>
+  </form>
+  
+  <shared-loader-spinner [isVisible]="isCreating()" />
+
+</div>

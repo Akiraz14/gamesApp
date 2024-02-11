@@ -1,0 +1,51 @@
+{
+  "answers": "Respuestas",
+  "attempts": "Intentos",
+  "categories": {
+    "all": "Todas",
+    "music": "Música",
+    "sport_and_leisure": "Deporte y ocio",
+    "film_and_tv": "Cine y televisión",
+    "arts_and_literature": "Artes y literatura",
+    "history": "Historia",
+    "society_and_culture": "Sociedad y cultura",
+    "science": "Ciencia",
+    "geography": "Geografía",
+    "food_and_drink": "Comida y bebida",
+    "general_knowledge": "Conocimientos generales"
+  },
+  "category": "Categoria",
+  "create": "Crear Trivia",
+  "difficulties": {
+    "all": "Todas",
+    "easy": "Fácil",
+    "medium": "Medio",
+    "hard": "Difícil"
+  },
+  "difficulty": "Dificultad",
+  "evaluate": "Evaluar",
+  "messageConfirm": {
+    "title": "¿Está seguro de evaluar las respuestas?",
+    "text": "Esto consumirá 1 intento de {{remainingAttempts}} posibles.",
+    "textLast": "Esta es tu última oportunidad.",
+    "accept": "Evaluar",
+    "cancel": "Cancelar"
+  },
+  "messageCorrect": {
+    "title": "¡Buen trabajo!",
+    "text" : "Todas tus respuestas son correctas."
+  },
+  "messageIncorrect": {
+    "title": "¡Qué lástima!",
+    "text" : "Algunas respuestas son incorrectas."
+  },
+  "mistakes": "Errores",
+  "question": "Pregunta",
+  "questionsNumber": "Número de preguntas",
+  "result": "Resultado",
+  "status": {
+    "false": "Incorrecto",
+    "true": "Correcto"
+  },
+  "timer": "Tiempo"
+}

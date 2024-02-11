@@ -1,0 +1,62 @@
+.sticky {
+  position: sticky;
+  top: 80px;
+  z-index: 1;
+}
+
+.card {
+  max-width: 100%;
+  // animation: colorChanging 4s infinite;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.front {
+  transition: visibility 1s;
+  animation: fadein 1s;
+}
+
+.back {
+  position: absolute;
+  visibility: hidden;
+}
+
+.flipped .front {
+  visibility: hidden;
+  filter: brightness(0) invert(1);
+  animation: fadeout 1s;
+}
+
+.flipped .back {
+  visibility: visible;
+}
+
+.color-1 { background-color: skyblue; }
+.color-2 { background-color: orange; }
+.color-3 { background-color: Khaki; }
+.color-4 { background-color: LightSalmon; }
+.color-5 { background-color: LightGreen; }
+.color-6 { background-color: LightSeaGreen; }
+.color-7 { background-color: Plum; }
+.color-8 { background-color: DeepPink; }
+.color-9 { background-color: MediumSlateBlue; }
+
+@keyframes colorChanging {
+  0%   { background: DeepSkyBlue; }
+  25%  { background: Plum; }
+  50%  { background: Khaki; }
+  75%  { background: DeepPink; }
+  100% { background: LightSeaGreen; }
+}
+
+@keyframes fadeout {
+  100% { opacity: 0; }
+  0% { opacity: 1; }
+}
+
+@keyframes fadein {
+  100% { opacity: 1; }
+  0% { opacity: 0; }
+}

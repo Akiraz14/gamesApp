@@ -1,1 +1,25 @@
-<p>side-menu works!</p>
+<div *transloco="let t;">
+  
+  <button type="button" class="btn btn-primary"
+    data-bs-toggle="offcanvas" data-bs-target="#menu"
+    aria-controls="menu">
+    &equiv; <span class="sidemenu-text">{{t('sidemenu.title')}}</span>
+  </button>
+
+  <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="menu"
+    aria-labelledby="menuLabel">
+    <div class="offcanvas-header bg-primary bg-gradient">
+      <h5 class="offcanvas-title" id="menuLabel">{{t('sidemenu.title')}}</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="list-group">
+        <li *ngFor="let item of menuItems" [routerLink]="[item.route]" data-bs-dismiss="offcanvas"
+          routerLinkActive="active" class="list-group-item">
+          {{t('sidemenu.items.'+item.title)}}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</div>

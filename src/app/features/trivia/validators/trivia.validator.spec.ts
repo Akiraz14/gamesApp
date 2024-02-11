@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { DifficultyValidator } from './difficulty.validator';
+import { TriviaValidator } from './trivia.validator';
 
-describe('DifficultyValidator', () => {
-  let service: DifficultyValidator;
+describe('TriviaValidator', () => {
+  let service: TriviaValidator;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(DifficultyValidator);
+    service = TestBed.inject(TriviaValidator);
   });
 
   it('should be created', () => {

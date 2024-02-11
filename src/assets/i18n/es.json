@@ -1,0 +1,17 @@
+{
+  "breadcrumbs": {
+    "Collection": "Colección",
+    "Find the same": "Encuentra la pareja",
+    "Games": "Juegos",
+    "Trivia": "Trivia"
+  },
+  "sidemenu": {
+    "title": "Menú",
+    "items": {
+      "home": "Inicio",
+      "games": "Juegos",
+      "about": "Acerca de"
+    }
+  },
+  "timer": "Tiempo"
+}

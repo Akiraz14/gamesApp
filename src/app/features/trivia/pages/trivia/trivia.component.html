@@ -1,1 +1,14 @@
-<p>trivia works!</p>
+<div class="" *transloco="let t; scope: 'games'">
+  <h2 class="fs-dokdo text-center">{{t('games.trivia.title')}}</h2>
+  <hr>
+  <div class="mx-3">
+    <button type="button" class="btn btn-secondary btn-sm mb-3" (click)="fullDescription = !fullDescription">
+      Description
+    </button>
+    <p [ngClass]="{'text-truncate': !fullDescription}">{{t('games.trivia.description')}}</p>
+  </div>
+</div>
+<hr>
+<trivia-create (isCreated)="onCreatedTrivia($event)" />
+<hr>
+<trivia-questionary *ngIf="isCreated()" />

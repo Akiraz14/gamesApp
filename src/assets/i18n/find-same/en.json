@@ -1,0 +1,12 @@
+{
+  "completed": "Game completed",
+  "findSame": "Find the Same",
+  "messageCorrect": {
+    "title": "Good job!",
+    "text" : "You found all the pairs."
+  },
+  "pairsNumber": "Number of pairs",
+  "restart": "Restart",
+  "start": "Start",
+  "timer": "Time"
+}

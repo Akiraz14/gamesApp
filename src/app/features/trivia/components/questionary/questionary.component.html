@@ -1,1 +1,51 @@
-<p>questionary works!</p>
+<div *transloco="let t; scope: 'trivia'">
+
+  <form [formGroup]="questionForm" (ngSubmit)="onSubmit()">
+
+    <div class="card sticky-top mb-3">
+      <div class="card-header text-bg-warning">Trivia</div>
+      <div class="card-body">
+        <div class="col d-flex justify-content-between">
+          <p class="card-text">{{t('trivia.attempts')}}: {{attempts()}} / 3</p>
+          <shared-timer [activate]="activeTimer" />
+
+          <button type="submit" class="btn btn-primary" [disabled]="questionForm.invalid || questionForm.disabled">
+            {{t('trivia.evaluate')}}
+          </button>
+        
+        </div>
+        <div *ngIf="result" class="col d-flex justify-content-between mt-3">
+          <p class="card-text mb-0">{{t('trivia.answers')}}: {{ result.totalAnswers}}</p>
+          <p class="card-text mb-0">{{t('trivia.mistakes')}}: {{result.totalMistakes }}</p>
+          <p class="card-text mb-0">{{t('trivia.result')}}: {{t('trivia.status.'+result.isCorrect)}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion" id="questionary">
+
+      <div class="accordion-item" *ngFor="let question of questionary; index as i">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#Q'+i"
+            aria-expanded="true" [attr.aria-controls]="'Q'+i">
+            {{t('trivia.question')+' #' + (i+1)}}
+          </button>
+        </h2>
+        <div [id]="'Q'+i" class="accordion-collapse collapse show">
+          <div class="accordion-body">
+            <h3>{{question.question}}</h3>
+            <div class="form-check" *ngFor="let answer of question.possibleAnswers; index as a">
+              <input class="form-check-input" type="radio" [id]="'Q'+i+'A'+a" [formControlName]="'Q'+i"
+                [value]="answer">
+              <label class="form-check-label" [for]="'Q'+i+'A'+a">
+                {{answer}}
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </form>
+
+</div>

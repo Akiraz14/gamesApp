@@ -1,1 +1,38 @@
-<p>board works!</p>
+<div *transloco="let t; scope: 'find-same'">
+
+  <div class="card text-bg-warning mb-3 sticky shadow">
+    <div class="d-flex justify-content-around card-body mb-0 pb-0">
+      <div class="col">
+        <div *ngIf="!active">{{t('findSame.completed')}}</div>
+        <div *ngIf="active">
+          {{firstCard?.name | titlecase}}<span *ngIf="secondCard"> / </span>{{secondCard?.name | titlecase}}
+        </div>
+      </div>
+  
+      <div class="col text-center">
+        <p>{{foundPairs()}} / {{pairsNumber}}</p>
+      </div>
+  
+      <div class="col text-end">
+        <shared-timer [activate]="active" />
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-4">
+    <div class="row row-cols-4 row-cols-sm-5 row-cols-md-6">
+      <div *ngFor="let card of board" class="col p-0 pe-2 pb-2">
+        <div (click)="flipCard(card)" [class]="'card shadow-sm '+ colorStyle " [class.flipped]="card.isFlipped">
+          <div class="front">
+            <img [src]="imgUrlHidden" alt="hidden">
+          </div>
+          <div class="back">
+            <img [src]="card.imgUrl" [alt]="card.name">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,1 +1,14 @@
-<p>find-same works!</p>
+<div *transloco="let t; scope: 'games'">
+  <h2 class="fs-rubik-doodle text-center">{{t('games.findSame.title')}}</h2>
+  <hr>
+  <div class="mx-3">
+    <button type="button" class="btn btn-secondary btn-sm mb-3" (click)="fullDescription = !fullDescription">
+      Description
+    </button>
+    <p [ngClass]="{'text-truncate': !fullDescription}">{{t('games.findSame.description')}}</p>
+  </div>
+  <hr>
+  <find-same-create (isCreated)="onCreated($event)" (pairs)="onPairsAssigned($event)" />
+  <hr>
+  <find-same-board *ngIf="isCreated" [pairsNumber]="pairs" />
+</div>

@@ -1,1 +1,7 @@
-<p>breadcrumb works!</p>
+<ul class="border rounded px-3 py-2" *transloco="let t">
+  <li *ngFor="let breadcrumb of (breadcrumbs$ | async); index as i">
+    <a [routerLink]="breadcrumb.url" class="link-offset-3" [ngClass]="{'link-primary': i === 0, 'link-info': i > 0}">
+      {{ t('breadcrumbs.'+breadcrumb.label) }}
+    </a>
+  </li>
+</ul>

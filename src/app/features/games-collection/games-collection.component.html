@@ -1,0 +1,17 @@
+<div class="row row-cols-2 row-cols-md-4">
+  <div *ngFor="let game of gamesInfo" class="col">
+    <div class="card" *transloco="let t; scope: 'games'">
+      <img [src]="game.imgUrl" class="card-img-top" [alt]="game.name">
+      <div class="card-body">
+        <h5 class="card-title">{{t('games.'+game.name+'.title')}}</h5>
+        <p class="card-text text-truncate">{{t('games.'+game.name+'.description')}}</p>
+        <div class="d-flex justify-content-end">
+          <button [routerLink]="[game.route]" class="btn btn-primary">
+            {{t('games.play')}}
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,15 @@
+{
+  "country": "País",
+  "countryDefaultValue": "Seleccionar un país",
+  "countryError": "Error",
+  "create": "Crear usuario",
+  "login": "Ingresar",
+  "password": "Contraseña",
+  "passwordError": "Error",
+  "register": "Registrar",
+  "signin": "Iniciar sesión",
+  "username": "Usuario",
+  "usernameError": "Error",
+  "usernameHelp": "El nombre de usuario debe tener {{minLength}}-{{maxLength}} caracteres, contener letras y números, y no debe contener espacios, caracteres especiales ni emoji."
+
+}

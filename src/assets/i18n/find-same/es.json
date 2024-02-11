@@ -1,0 +1,12 @@
+{
+  "completed": "Juego completado",
+  "findSame": "Encuentra la pareja",
+  "messageCorrect": {
+    "title": "¡Buen trabajo!",
+    "text" : "Encontraste todas las parejas."
+  },
+  "pairsNumber": "Número de parejas",
+  "restart": "Reiniciar",
+  "start": "Comenzar",
+  "timer": "Tiempo"
+}
