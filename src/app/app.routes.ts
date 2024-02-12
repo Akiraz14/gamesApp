@@ -11,7 +11,7 @@ export const routes: Routes = [
   },
   {
     path: 'games',
-    data: { breadcrumb: 'Games' },
+    data: { breadcrumb: 'Games', icon: './assets/images/games/icons8-arcade-machine.png' },
     component: GamesComponent,
     loadChildren: () => import('@core/pages/games/games.routes')
       .then(r => r.GAMES_ROUTES),

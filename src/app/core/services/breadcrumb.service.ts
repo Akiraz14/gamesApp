@@ -38,7 +38,8 @@ export class BreadcrumbService {
     if (route.data['breadcrumb']) {
       const breadcrumb = {
         label: this.getLabel(route.data),
-        url: '/' + routeUrl.join('/')
+        url: '/' + routeUrl.join('/'),
+        icon: this.getIcon(route.data),
       };
       breadcrumbs.push(breadcrumb);
     }
@@ -54,4 +55,7 @@ export class BreadcrumbService {
     return typeof data['breadcrumb'] === 'function' ? data['breadcrumb'](data) : data['breadcrumb'];
   }
   
+  private getIcon(data: Data) {
+    return data['icon'] ?? '';
+  }
 }

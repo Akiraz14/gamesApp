@@ -62,7 +62,7 @@ export class QuestionaryComponent implements OnInit, OnDestroy {
     this.questionary.forEach((q, i) => {
       this.questionForm?.addControl(`Q${i}`, new FormControl('', Validators.required));
     });
-
+    
     this.startTimer();
   }
 
@@ -76,6 +76,16 @@ export class QuestionaryComponent implements OnInit, OnDestroy {
     });
 
     return answers;
+  }
+
+  getAnswersCount(): number {
+    let answCount = 0;
+    
+    this.questionary.forEach((q, i) => {
+      if (!this.questionForm.get(`Q${i}`)?.pristine) answCount+=1;
+    });
+
+    return answCount;
   }
 
   onSubmit() {

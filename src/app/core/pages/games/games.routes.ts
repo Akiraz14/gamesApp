@@ -5,7 +5,7 @@ import { GamesCollectionComponent } from "@features/games-collection/games-colle
 export const GAMES_ROUTES: Routes = [
   {
     path: '',
-    data: { breadcrumb: 'Collection' },
+    data: { breadcrumb: 'Collection', icon: '' },
     component: GamesCollectionComponent,
   },
   {

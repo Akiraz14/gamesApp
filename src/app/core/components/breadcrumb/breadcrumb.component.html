@@ -1,6 +1,8 @@
 <ul class="border rounded px-3 py-2" *transloco="let t">
   <li *ngFor="let breadcrumb of (breadcrumbs$ | async); index as i">
-    <a [routerLink]="breadcrumb.url" class="link-offset-3" [ngClass]="{'link-primary': i === 0, 'link-info': i > 0}">
+    <a [routerLink]="breadcrumb.url" class="link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+       [ngClass]="{'link-warning': i === 0, 'link-info': i > 0}">
+      <img *ngIf="breadcrumb.icon" [src]="breadcrumb.icon" alt="icon">
       {{ t('breadcrumbs.'+breadcrumb.label) }}
     </a>
   </li>

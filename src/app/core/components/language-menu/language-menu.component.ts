@@ -22,13 +22,13 @@ export class LanguageMenuComponent {
       code: 'en',
       name: 'English',
       shorthand: 'ENG',
-      imgUrl: 'assets/images/languages/en.png',
+      imgUrl: './assets/images/languages/en.png',
     },
     {
       code: 'es',
       name: 'Spanish',
       shorthand: 'SPA',
-      imgUrl: 'assets/images/languages/es.png',
+      imgUrl: './assets/images/languages/es.png',
     },
   ];
   

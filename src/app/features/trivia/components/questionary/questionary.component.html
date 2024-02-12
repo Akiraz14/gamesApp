@@ -2,12 +2,15 @@
 
   <form [formGroup]="questionForm" (ngSubmit)="onSubmit()">
 
-    <div class="card sticky-top mb-3">
-      <div class="card-header text-bg-warning">Trivia</div>
+    <div class="card mb-3 sticky shadow">
+      <div class="card-header text-bg-warning d-flex justify-content-between">
+        Trivia
+        <shared-timer [activate]="activeTimer" />
+      </div>
       <div class="card-body">
         <div class="col d-flex justify-content-between">
+          <p class="card-text">{{t('trivia.questionsNumber')}}: {{getAnswersCount()}} / {{questionary.length}}</p>
           <p class="card-text">{{t('trivia.attempts')}}: {{attempts()}} / 3</p>
-          <shared-timer [activate]="activeTimer" />
 
           <button type="submit" class="btn btn-primary" [disabled]="questionForm.invalid || questionForm.disabled">
             {{t('trivia.evaluate')}}
