@@ -1,0 +1,11 @@
+{
+  "play": "Jugar ahora",
+  "findSame": {
+    "title": "Encuentra la pareja",
+    "description": "Encuentra la pareja es un juego de rondas en el que todas las cartas se colocan boca abajo y dos cartas se voltean boca arriba en cada turno. El objetivo del juego es voltear pares de cartas iguales. Encuentra la pareja también se conoce con una variedad de otros nombres, incluido el de Concentración, Memoria, Emparejar pares o simplemente Pares."
+  },
+  "trivia": {
+    "title": "Trivia",
+    "description": "El juego de Trivia ponen a prueba los conocimientos de un jugador en un área específica o en una amplia gama de temas. El juego Triva consta de preguntas de opción múltiple o preguntas de verdadero/falso. El objetivo es dar tantas respuestas correctas como sea posible y ganar puntos para avanzar de nivel."
+  }
+}

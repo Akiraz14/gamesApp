@@ -1,0 +1,12 @@
+{
+  "play": "Play now",
+  "findSame": {
+    "title": "Find the same",
+    "description": "Find the same is a round game in which all of the cards are laid face down and two cards are flipped face up over each turn. The object of the game is to turn over pairs of matching cards. Find the same is also known by a variety of other names including also known as Concentration, Memory, Matching Pairs or simply Pairs."
+  },
+  "trivia": {
+    "title": "Trivia",
+    "description": "Trivia game test a player's knowledge in a specific area or a wide range of topics. Triva game consist of multiple-choice questions or true/false questions. The goal is to give as many correct answers as possible and earn points to progress through levels."
+  },
+  "showDescription": "Show description"
+}

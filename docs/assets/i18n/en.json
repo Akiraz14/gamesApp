@@ -1,0 +1,17 @@
+{
+  "breadcrumbs": {
+    "Collection": "Collection",
+    "Find the same": "Find the same",
+    "Games": "Games",
+    "Trivia": "Trivia"
+  },
+  "sidemenu": {
+    "title": "Menu",
+    "items": {
+      "home": "Home",
+      "games": "Games",
+      "about": "About"
+    }
+  },
+  "timer": "Timer"
+}

@@ -32,6 +32,7 @@ npm run build:github
 ```
 
 The build artifacts will be stored in the directories `dist/` and `docs/`.
+The `assets` folder must be copied manually
 
 Note: This custom command, deletes the current `docs/` folder, build the app and modifies the `base-href` in the `index.html` file and copies the contents of `dist/browser` to a new `docs/` forder.
 

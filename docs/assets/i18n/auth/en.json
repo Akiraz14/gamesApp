@@ -1,0 +1,14 @@
+{
+  "country": "Country",
+  "countryDefaultValue": "Select a country",
+  "countryError": "Error",
+  "create": "Create user",
+  "login": "Login",
+  "password": "Password",
+  "passwordError": "Error",
+  "register": "Register",
+  "signin": "Sign in",
+  "username": "Username",
+  "usernameError": "Error",
+  "usernameHelp": "Your username must be {{minLength}}-{{maxLength}} characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji."
+}
