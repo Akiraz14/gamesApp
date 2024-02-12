@@ -1,6 +1,36 @@
-
 <app-header />
 
-<p>about works!</p>
+<div class="container mt-4" *transloco="let t">
+  <div class="row">
+    <h2>{{t('about.title')}}</h2>
+    <hr>
+    <p>{{t('about.description')}}</p>
+  </div>
+  <div class="row my-3">
+    <h3>{{t('about.trivia')}}</h3>
+    <p>{{t('about.triviaDescription')}}</p>
+
+    <a target="_blank" href="https://the-trivia-api.com/"
+      class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
+      <figure>
+        <img src="./assets/images/logos/the-trivia-api.png" alt="The trivia api" class="img-fluid rounded logo-api">
+        <figcaption>The Trivia Api v.1.0</figcaption>
+      </figure>
+    </a>
+  </div>
+  <div class="row my-4">
+    <h3>{{t('about.findSame')}}</h3>
+    <p>{{t('about.findSameDescription')}}</p>
+
+    <a target="_blank" href="https://pokeapi.co/"
+      class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
+      <figure>
+        <img src="./assets/images/logos/pokeapi.png" alt="PokeApi" class="img-fluid logo-api">
+        <figcaption>PokeApi v.2.0</figcaption>
+      </figure>
+    </a>
+  </div>
+</div>
+
 
 <app-footer />
