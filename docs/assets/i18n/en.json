@@ -1,4 +1,12 @@
 {
+  "about": {
+    "title": "About",
+    "description": "This page was created for practical purposes, the resources implemented are free and used for non-commercial educational purposes.",
+    "trivia": "Trivia",
+    "triviaDescription": "The questions asked in this game are obtained through a free Api called The Trivia Api.",
+    "findSame": "Find the same",
+    "findSameDescription": "The images of the Pokemon shown on the cards are obtained through the free API called PokeApi."
+  },
   "breadcrumbs": {
     "Collection": "Collection",
     "Find the same": "Find the same",
@@ -6,6 +14,10 @@
     "Trivia": "Trivia"
   },
   "createdBy": "Created by",
+  "home": {
+    "title": "Home",
+    "description": "Welcome, this page contains different games for the purpose of entertainment."
+  },
   "sidemenu": {
     "title": "Menu",
     "items": {
