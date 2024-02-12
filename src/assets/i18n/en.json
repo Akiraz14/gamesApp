@@ -14,6 +14,10 @@
     "Trivia": "Trivia"
   },
   "createdBy": "Created by",
+  "home": {
+    "title": "Home",
+    "description": "Welcome, this page contains different games for the purpose of entertainment."
+  },
   "sidemenu": {
     "title": "Menu",
     "items": {

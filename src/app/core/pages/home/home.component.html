@@ -1,6 +1,53 @@
 
 <app-header />
 
-<p>home works!</p>
+<div class="container mt-4" *transloco="let t; scope: 'games'">
+  <div class="row">
+    <h2>{{t('home.title')}}</h2>
+    <hr>
+    <p>{{t('home.description')}}</p>
+  </div>
+  <div class="row d-flex justify-content-center">
+    <div id="carouselGames" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselGames" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Game 1"></button>
+        <button type="button" data-bs-target="#carouselGames" data-bs-slide-to="1" aria-label="Game 2"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./assets/images/games/find-same.jpg" class="d-block w-100 rounded" alt="Find the same">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>
+              <a [routerLink]="['/games/find-same']" class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
+                {{t('games.findSame.title')}}
+              </a>
+            </h3>
+            <p class="text-truncate">{{t('games.findSame.description')}}</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/images/games/trivia.jpg" class="d-block w-100 rounded" alt="Trivia">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>
+              <a [routerLink]="['/games/trivia']" class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
+                {{t('games.trivia.title')}}
+              </a>
+            </h3>
+            <p class="text-truncate">{{t('games.trivia.description')}}</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselGames" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselGames" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+  </div>
+</div>
 
 <app-footer />

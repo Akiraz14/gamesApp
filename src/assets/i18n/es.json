@@ -14,6 +14,10 @@
     "Trivia": "Trivia"
   },
   "createdBy": "Creado por",
+  "home": {
+    "title": "Inicio",
+    "description": "Bienvenido, esta página contiene diferentes juegos con el fin de entretener."
+  },
   "sidemenu": {
     "title": "Menú",
     "items": {
