@@ -26,14 +26,14 @@ Navigate to `http://localhost:4200/`. The application will automatically reload 
 
 ## Build
 
-Run the next command to build the project.
+Run the command to build the project.
 ```
-npm run build
+npm run build:github
 ```
-In case the environment variables are already created, you can use `ng build` command.
 
-The build artifacts will be stored in the `dist/` directory.
+The build artifacts will be stored in the directories `dist/` and `docs/`.
 
+Note: This custom command, deletes the current `docs/` folder, build the app and modifies the `base-href` in the `index.html` file and copies the contents of `dist/browser` to a new `docs/` forder.
 
 ## Further help
 

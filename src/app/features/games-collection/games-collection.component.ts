@@ -25,12 +25,12 @@ export class GamesCollectionComponent {
     {
       name: 'findSame',
       route: '/games/find-same',
-      imgUrl: 'assets/images/find-same/find-same.png',
+      imgUrl: 'assets/images/games/find-same.jpg',
     },
     {
       name: 'trivia',
       route: '/games/trivia',
-      imgUrl: 'assets/images/trivia/trivia.png',
+      imgUrl: 'assets/images/games/trivia.jpg',
     },
   ];
 

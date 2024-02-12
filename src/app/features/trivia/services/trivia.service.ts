@@ -38,7 +38,7 @@ export class TriviaService {
     const shuffle = (array: string[]) => {
       return array.sort(() => Math.random() - 0.5); 
     };
-    console.log(this._currentTrivia);
+    // console.log(this._currentTrivia);
     return this._currentTrivia.map(q => ({
       id: q.id,
       category: q.category,

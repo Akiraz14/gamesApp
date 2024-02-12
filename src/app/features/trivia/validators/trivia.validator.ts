@@ -12,7 +12,6 @@ export class TriviaValidator {
         && !formGroup.get('difficultyHard')?.value
         && !formGroup.get('difficultyAll')?.value
       ) {
-        console.log('missingDifficulty')
         return {
           missingDifficulty: true,
         }
